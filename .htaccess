@@ -1,0 +1,9 @@
+# Allow file uploads up to 2MB
+php_value upload_max_filesize 2M
+php_value post_max_size 2M
+
+# Deny access to .htaccess itself
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files> 
