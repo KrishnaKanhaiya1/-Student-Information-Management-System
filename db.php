@@ -1,17 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-// db.php - Database connection
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'student_management';
-try {
-    $conn = new mysqli($host, $user, $pass, $db);
-    if ($conn->connect_error) {
-        throw new Exception('Database connection failed: ' . $conn->connect_error);
-    }
-} catch (Exception $e) {
-    die($e->getMessage());
-}
-?> 
+// db.php
+// This file is now deprecated. All functionality has been moved to functions.php.
+// For database connection, use connect_db() from functions.php.
+require_once 'functions.php';
+?>
